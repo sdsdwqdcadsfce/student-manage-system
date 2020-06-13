@@ -30,7 +30,7 @@
     <include refid="Base_Column_List" />
     from books
    <if test="bookName!=null and  bookName!='' ">
-     where book_name like concat('%', #{id,jdbcType=VARCHAR} ,'%')
+     where book_name like concat('%', #{bookName,jdbcType=VARCHAR} ,'%')
    </if>
   </select>
 

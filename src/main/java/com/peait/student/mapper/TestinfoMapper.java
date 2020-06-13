@@ -2,6 +2,7 @@ package com.peait.student.mapper;
 
 import com.peait.student.entity.Testinfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,5 +20,5 @@ public interface TestinfoMapper {
 
     int updateByPrimaryKey(Testinfo record);
 
-    List<Testinfo> getList(String subjectName);
+    List<Testinfo> getList(@Param("subjectName") String subjectName );
 }

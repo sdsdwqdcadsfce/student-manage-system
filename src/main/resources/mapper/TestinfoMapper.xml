@@ -30,7 +30,7 @@
     <include refid="Base_Column_List" />
     from testinfo
    <if test="subjectName!=null and subjectName!=''">
-     where subject_name like concat('%', #{id,jdbcType=VARCHAR},'%')
+     where subject_name like concat('%', #{subjectName,jdbcType=VARCHAR},'%')
    </if>
   </select>
 

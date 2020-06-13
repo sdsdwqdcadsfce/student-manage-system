@@ -2,6 +2,7 @@ package com.peait.student.mapper;
 
 import com.peait.student.entity.Books;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,5 +20,5 @@ public interface BooksMapper {
 
     int updateByPrimaryKey(Books record);
 
-    List<Books> getList(String bookName);
+    List<Books> getList(@Param("bookName") String bookName);
 }

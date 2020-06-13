@@ -2,6 +2,7 @@ package com.peait.student.mapper;
 
 import com.peait.student.entity.StudentSorce;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,5 +20,5 @@ public interface StudentSorceMapper {
 
     int updateByPrimaryKey(StudentSorce record);
 
-    List<StudentSorce> getList(String subjectName);
+    List<StudentSorce> getList(@Param("subjectName") String subjectName);
 }
